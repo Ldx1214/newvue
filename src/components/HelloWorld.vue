@@ -4,39 +4,38 @@
     <h2>Essential Links</h2> -->
     <ul>
       <li>
-        <a href="javascript:;">
-          Solutions
-        </a>
+        <router-link  to="/">Solutions</router-link>
         <b class="img"></b>
         <div class="menu_li_c">
-          <p><a href="/en/intelligentData?dataSolution=0">Intelligent Security</a></p>
-          <p><a href="/en/intelligentData?dataSolution=1">Smart Home</a></p>
-          <p><a href="/en/intelligentData?dataSolution=2">Intelligent Customer</a></p>
-          <p><a href="/en/intelligentData?dataSolution=3">Intelligent Driving</a></p>
-          <p><a href="/en/intelligentData?dataSolution=4">Intelligent Entertainment</a></p>
-          <p><a href="/en/intelligentData?dataSolution=5">Intelligent Translation</a></p>
+          <p><router-link  to="/en/intelligentData?dataSolution=0">Intelligent Security</router-link></p>
+          <p><router-link  to="/en/intelligentData?dataSolution=1">Smart Home</router-link></p>
+          <p><router-link  to="/en/intelligentData?dataSolution=2">Intelligent Customer</router-link></p>
+          <p><router-link  to="/en/intelligentData?dataSolution=3">Intelligent Driving</router-link></p>
+          <p><router-link  to="/en/intelligentData?dataSolution=4">Intelligent Entertainment</router-link></p>
+          <p><router-link  to="/en/intelligentData?dataSolution=5">Intelligent Translation</router-link></p>
         </div>
       </li>
       <li>
-        <a href="javascript:;">
-          Dataset Product
-        </a>
+        <router-link  to="/">Dataset Product</router-link>
+        <div class="menu_li_c">
+          <p><router-link  to="/en/products?dataclass1=147">Image</router-link></p>
+          <p><router-link  to="/en/products?dataclass1=165">Speech</router-link></p>
+          <p><router-link  to="/en/products?dataclass1=183">Text</router-link></p>
+        </div>
       </li>
       <li>
-        <a href="javascript:;">
-          Customization
-        </a>
+        <router-link  to="/">Customization</router-link>
+        <div class="menu_li_c">
+          <p><router-link  to="/en/dataCollection">Data Collection</router-link></p>
+          <p><router-link  to="/en/dataTanging">Data Annotation</router-link></p>
+        </div>
       </li>
       <li>
-        <a href="javascript:;">
-          Open Source
-        </a>
+        <router-link  to="/en/opensourc">Open Source</router-link>
       </li>
 
       <li>
-        <a href="javascript:;">
-          Why Us
-        </a>
+        <router-link  to="/en/whyChangeUs">Why Us</router-link>
       </li>
     </ul>
     <div class="home_banner">
@@ -339,6 +338,14 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
+.img{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url(/../images/top_03.png) no-repeat center;
+  background-size: contain;
+  margin-left: 5px;
+}
 ul {
   list-style-type: none;
   padding: 0;
@@ -348,14 +355,14 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: black;
 }
 .menu_li_c{
   position: absolute;
   left: 0px;
   top: 60px;
   padding: 10px 0;
-  display: none;
+  display: block;
 }
 a{
   text-decoration:none;
