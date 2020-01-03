@@ -324,7 +324,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'SmartHome',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
