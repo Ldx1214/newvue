@@ -312,7 +312,7 @@
 </template>
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'text',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
