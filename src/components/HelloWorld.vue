@@ -4,15 +4,10 @@
     <h2>Essential Links</h2> -->
     <ul>
       <li>
-        <router-link  to="/">Solutions</router-link>
+        <router-link  to="/">Solution</router-link>
         <b class="img"></b>
-        <div class="menu_li_c">
-          <p><router-link  to="/en/intelligentData?dataSolution=0">Intelligent Security</router-link></p>
-          <p><router-link  to="/en/intelligentData?dataSolution=1">Smart Home</router-link></p>
-          <p><router-link  to="/en/intelligentData?dataSolution=2">Intelligent Customer</router-link></p>
-          <p><router-link  to="/en/intelligentData?dataSolution=3">Intelligent Driving</router-link></p>
-          <p><router-link  to="/en/intelligentData?dataSolution=4">Intelligent Entertainment</router-link></p>
-          <p><router-link  to="/en/intelligentData?dataSolution=5">Intelligent Translation</router-link></p>
+        <div class="menu_li_c" id="example-1">
+          <p v-for="item in items"><router-link  v-bind:key="item.route" to="/en/intelligentData?dataSolution=">{{ item.message }}</router-link></p>
         </div>
       </li>
       <li>
@@ -49,10 +44,6 @@
             </li>
 
         </ul>
-        <!-- <ol class='clear bannerDot'>
-            <li class='active'></li>
-            
-        </ol> -->
     </div>
     <!-------------------------- 数据产品推荐 -------------------------->
     <div class="home_product">
@@ -79,7 +70,6 @@
                                 <li title="Annotating 21 Key Points and Gesture Attributes">Annotating 21 Key Points and Gesture Attributes</li>
                             </ul>
                         </dd>
-                        </a>
                     </dl>
                 </li>
                 <li>
@@ -327,7 +317,23 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      items: [
+        { message: 'Intelligent Security',route:'1' },
+        { message: 'Smart Home' },
+        { message: 'Intelligent Customer'},
+        { message: 'Intelligent Driving'},
+        { message: 'Intelligent Entertainment'},
+        { message: 'Intelligent Translation'}
+      ],
+        item: [
+            { message: 'As a professional AI data service provider, Datatang is dedicated to providing data collection and data product services for global AI enterprises through three service modes: massive AI data sets with its own copyrighted  AI data customization service and data annotation platform.' },
+            { message: 'Smart Home' },
+            { message: 'Intelligent Customer'},
+            { message: 'Intelligent Driving'},
+            { message: 'Intelligent Entertainment'},
+            { message: 'Intelligent Translation'}
+        ]
     }
   }
 }

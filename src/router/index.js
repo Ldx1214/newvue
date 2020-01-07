@@ -11,18 +11,11 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
-    },{
+    },
+    {
       path: 'SmartHome',
       name: 'SmartHome',
       component: SmartHome
-    },{
-      path: 'speech',
-      name: 'speech',
-      component: Speech
-    },{
-      path: 'text',
-      name: 'text',
-      component: text
     }
   ]
 })
