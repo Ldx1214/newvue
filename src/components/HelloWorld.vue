@@ -7,7 +7,7 @@
         <router-link  to="/">Solution</router-link>
         <b class="img"></b>
         <div class="menu_li_c" id="example-1">
-          <p v-for="item in items"><router-link  v-bind:key="item.route" to="/en/intelligentData?dataSolution=">{{ item.message }}</router-link></p>
+            <p v-for="item in items"><router-link  :to="item.route">{{ item.message }}</router-link></p>
         </div>
       </li>
       <li>
@@ -37,9 +37,8 @@
         <ul class=" home_banner_list">
             <li style='display:flex;'>
                 <!-- <img src="/shujutang/static/image/index/banner2.png" alt=""> -->
-                <p>
-                    As a professional AI data service provider, Datatang is dedicated to providing data collection and data product services for global AI enterprises through three service modes: massive AI data sets with its own copyrighted (massive shared copyright AI
-                    datasets), AI data customization service and data annotation platform.
+                <p v-for="item in arr">
+                    {{ item.message }}
                 </p>
             </li>
 
@@ -52,8 +51,7 @@
                 <a href="/en/intelligentData?dataSolution=4">
                     <div class="home_product_tit_bg">
                         <h2>Intelligent Entertainment</h2>
-                        <p title="In 2017, the global smartphone sales had reached 1.4 billion units. By 2018, the number of mobile phone applications had exceeded 4.14 million. In the most popular APP, data plays a powerful role in supporting powerful functions such as one-touch beauty, live interaction, short video special effects, identity authentication, face unlocking, etc.">In 2017, the global smartphone sales had reached 1.4 billion units. By 2018, the number of mobile phone applications had exceeded 4.14 million. In the most popular APP, data plays a powerful role in supporting powerful functions
-                            such as one-touch beauty, live interaction, short video special effects, identity authentication, face unlocking, etc.</p>
+                        <p v-for="item in arr" title="In 2017, the global smartphone sales had reached 1.4 billion units. By 2018, the number of mobile phone applications had exceeded 4.14 million. In the most popular APP, data plays a powerful role in supporting powerful functions such as one-touch beauty, live interaction, short video special effects, identity authentication, face unlocking, etc.">{{ item.message }}</p>
                         <span href="javascript:;">Learn more</span>
                     </div>
                 </a>
@@ -319,21 +317,17 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       items: [
-        { message: 'Intelligent Security',route:'1' },
-        { message: 'Smart Home' },
-        { message: 'Intelligent Customer'},
-        { message: 'Intelligent Driving'},
-        { message: 'Intelligent Entertainment'},
-        { message: 'Intelligent Translation'}
+        { message: 'Intelligent Security',route:'/en/intelligentData?dataSolution=0' },
+        { message: 'Smart Home',route:'/en/intelligentData?dataSolution=1'  },
+        { message: 'Intelligent Customer',route:'/en/intelligentData?dataSolution=2' },
+        { message: 'Intelligent Driving',route:'/en/intelligentData?dataSolution=3' },
+        { message: 'Intelligent Entertainment',route:'/en/intelligentData?dataSolution=4' },
+        { message: 'Intelligent Translation',route:'/en/intelligentData?dataSolution=5' }
       ],
-        item: [
-            { message: 'As a professional AI data service provider, Datatang is dedicated to providing data collection and data product services for global AI enterprises through three service modes: massive AI data sets with its own copyrighted  AI data customization service and data annotation platform.' },
-            { message: 'Smart Home' },
-            { message: 'Intelligent Customer'},
-            { message: 'Intelligent Driving'},
-            { message: 'Intelligent Entertainment'},
-            { message: 'Intelligent Translation'}
-        ]
+      arr: [
+          {message: 'As a professional AI data service provider, Datatang is dedicated to providing data collection and data product services for global AI enterprises through three service modes: massive AI data sets with its own copyrighted (massive shared copyright AIdatasets), AI data customization service and data annotation platform.'},
+          {message: 'In 2017, the global smartphone sales had reached 1.4 billion units. By 2018, the number of mobile phone applications had exceeded 4.14 million. In the most popular APP, data plays a powerful role in supporting powerful functions such as one-touch beauty, live interaction, short video special effects, identity authentication, face unlocking, etc.'}
+      ]
     }
   }
 }
